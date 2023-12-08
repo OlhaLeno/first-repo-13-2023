@@ -1,5 +1,5 @@
 class Fish:
-    def __init__(self, name, age, species, size, prefferedFood, isAggressive, neededSpace):  # init відп за ініці екземп
+    def __init__(self, name, age, species, size, prefferedFood, isAggressive, neededSpace):
         self.name = name
         self.age = age
         self.species = species
@@ -29,13 +29,13 @@ class Aquarium:
 
     def get_3_largest_fishes(self):
         # сортує список за розміром, key=lambda вказує на сортування за розміром кожної риби
-        sorted_fish = sorted(self.fish_list, key=lambda x: x.size, reverse=True)  # reverse=True сортув в зворотн порядк
+        sorted_fish = sorted(self.fish_list, key=lambda x: x.size, reverse=True)  # reverse=True сортування в зворотньому порядку
         get_3_largest_fishes = sorted_fish[:3]
-        for fish in get_3_largest_fishes:  # цикл,for викор для ітерації-процес повторення певної послідовності елементі
+        for fish in get_3_largest_fishes:  # for використовується для ітерації-процес повторення певної послідовності елементів
             print(f"Ім'я: {fish.name}, Вид: {fish.species}, Розмір: {fish.size}")
 
 
-if __name__ == "__main__":  # за умови, що програма запускається безпосередньо (не імпортується як модуль)
+if __name__ == "__main__":  # за умови, що програма запускається безпосередньо, а не імпортується як модуль
     aquarium1 = Aquarium(totalVolume=10)
     aquarium2 = Aquarium(totalVolume=15)
 
